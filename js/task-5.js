@@ -1,3 +1,5 @@
+// ВИПРАВЛЕНО
+
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215)
     .toString(16)
@@ -5,12 +7,13 @@ function getRandomHexColor() {
 }
 
 const body = document.querySelector("body");
-const span = document.querySelector("span.color");
+const colorSpan = document.querySelector("span.color");
 const btn = document.querySelector(".change-color");
 
 function changeColor() {
-  body.style.backgroundColor = getRandomHexColor();
-  span.textContent = getRandomHexColor();
+  const color = getRandomHexColor();
+  body.style.backgroundColor = color;
+  colorSpan.textContent = color;
 }
 
 btn.addEventListener("click", changeColor);

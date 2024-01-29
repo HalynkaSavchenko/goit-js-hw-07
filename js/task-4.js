@@ -1,3 +1,5 @@
+// ВИПРАВЛЕНО
+
 const form = document.querySelector(".login-form");
 
 function formHandler(event) {
@@ -7,8 +9,8 @@ function formHandler(event) {
     }
     else {
         const data = {
-        email: event.target.email.value.trim(),
-        password: event.target.password.value.trim()
+        email: form.elements.email.value.trim(),
+        password: form.elements.password.value.trim()
         };
         console.log(data);
         form.reset();

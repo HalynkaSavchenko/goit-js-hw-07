@@ -39,20 +39,24 @@ const markup = images.map(image => {
 
 gallery.insertAdjacentHTML("beforeend", markup);
 
-// Додаткове оформлення галереї
-const li = document.querySelectorAll(".list-item");
-const img = document.querySelectorAll("img");
-img.forEach(image => {
-  image.style.width = "800px";
-  image.style.height = "500px";
-});
-li.forEach(item => {
-  item.style.margin = "10px";
-});
+
+// Додаткове оформлення галереї ||ПЕРЕНЕСЕНО В CSS||
+// const li = document.querySelectorAll(".list-item");
+// const img = document.querySelectorAll("img");
+// img.forEach(image => {
+//   image.style.width = "800px";
+//   image.style.height = "500px";
+// });
+// li.forEach(item => {
+//   item.style.margin = "10px";
+// });
 
 
 
-// Альтернативне рішення
+// Альтернативне рішення  ||ВИПРАВЛЕНЕ||
+// const gallery = document.querySelector("ul.gallery");
+// gallery.style.display = "flex";
+// gallery.style.listStyleType = "none"
 
 // images.forEach(image => {
 //   const li = document.createElement("li");
@@ -60,9 +64,6 @@ li.forEach(item => {
 //   const img = document.createElement("img");
 //   img.setAttribute("src", image.url);
 //   img.setAttribute("alt", image.alt);
-//   img.style.width = "800px";
-//   img.style.height = "500px";
-//   li.style.margin = "10px";
 //   li.append(img);
 //   gallery.append(li)
 // })
